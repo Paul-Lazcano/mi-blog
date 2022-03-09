@@ -2,6 +2,7 @@ import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import MarkdownIt from 'markdown-it';
 import { Post, Posts } from '../../types';
+import id from './id.module.css';
 
 interface SSGProps {
   post: Post;
@@ -51,13 +52,16 @@ const PostPage: NextPage<Props> = ({ post }) => {
         <title>{post?.attributes?.title}</title>
         <meta name="description" content={post?.attributes?.description} />
       </Head>
-      <section>
-        <header>
+      <section className={`${id.article} flex flex-col gap-y-8 my-4`}>
+        <header className="flex flex-col gap-y-3">
           <h1>{post?.attributes?.title}</h1>
-          <h2>{post?.attributes?.description}</h2>
+          <p>{post?.attributes?.description}</p>
         </header>
         <main>
-          <article dangerouslySetInnerHTML={{ __html: htmlContent }} />
+          <article
+            className="flex flex-col gap-y-3 h-max"
+            dangerouslySetInnerHTML={{ __html: htmlContent }}
+          />
         </main>
       </section>
     </>

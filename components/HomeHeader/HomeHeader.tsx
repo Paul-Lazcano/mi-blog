@@ -1,11 +1,11 @@
 export default function HomeHeader() {
   return (
-    <header>
-      <h1 className="text-3xl">Home</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eos
-        natus placeat voluptatem reprehenderit omnis velit, optio illum
-        laboriosam ipsum.
+    <header className="flex flex-col gap-y-3">
+      <h1 className="text-4xl text-slate-600 font-light">
+        Bienvenido a mi blog
+      </h1>
+      <p className="text-base font-light">
+        Aquí podrás relajarte y leer acerca de variados temas contados por mi!
       </p>
     </header>
   );

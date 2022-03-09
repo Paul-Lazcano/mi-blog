@@ -11,8 +11,10 @@ const PostPreview: FC<Props> = ({ post }) => {
     <Link href={`/posts/${post.id}`}>
       <a>
         <div className="flex flex-col gap-y-2 bg-white shadow-lg w-full border border-solid border-gray-200 hover:shadow-2xl transition ease-in duration-150 p-3 lg:p-5 rounded-lg cursor-pointer">
-          <h3 className="text-xl">{post.attributes.title}</h3>
-          <p>{post.attributes.description}</p>
+          <h3 className="text-xl text-slate-600 font-light">
+            {post.attributes.title}
+          </h3>
+          <p className="text-base font-light">{post.attributes.description}</p>
         </div>
       </a>
     </Link>

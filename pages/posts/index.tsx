@@ -20,14 +20,14 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 const AllPostsPage: FC<Props> = ({ posts }) => {
   return (
-    <>
+    <section className="flex flex-col gap-y-4 my-4">
       <Head>
         <title>Todos mis posts</title>
         <meta name="description" content="Todos mis posts" />
       </Head>
-      <h3 className="text-3xl">Todos los post</h3>
+      <h3 className="text-4xl font-light text-slate-600">Todos los post</h3>
       <AllPosts posts={posts} />
-    </>
+    </section>
   );
 };
 

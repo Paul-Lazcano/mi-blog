@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 const Home: FC<Props> = ({ posts }) => {
   return (
-    <>
+    <section className="flex flex-col gap-y-4 my-4">
       <Head>
         <title>Blog de Paul</title>
         <meta
@@ -37,9 +37,9 @@ const Home: FC<Props> = ({ posts }) => {
         />
       </Head>
       <HomeHeader />
-      <h3 className="text-2xl">Últimos 5 post</h3>
+      <h3 className="text-2xl text-slate-600 font-light">Últimos 5 post</h3>
       <HomeLatestPosts posts={posts} />
-    </>
+    </section>
   );
 };
 
