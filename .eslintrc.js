@@ -22,5 +22,12 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'comma-dangle': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'import/no-unresolved': 'off',
+    'import/extensions': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'function-paren-newline': 'off',
+    'no-restricted-exports': 'off',
+    'arrow-body-style': 'off',
   },
 };
